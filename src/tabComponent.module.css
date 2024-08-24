@@ -1,0 +1,130 @@
+:root {
+  --medium-blue: hsl(212, 80%, 42%);
+  --light-blue: hsl(207, 90%, 54%);
+  --light-grey: hsla(0, 0%, 100%, 0.7);
+  --yellow-color: hsl(54, 100%, 62%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+.toolbar {
+  background-color: var(--light-blue);
+  padding: 30px 20px;
+}
+
+h1 {
+  color: var(--white-color);
+  font-weight: 300;
+}
+
+.tabMenu {
+  background-color: var(--light-blue);
+  padding: 10px 0;
+}
+
+.tabMenu ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  gap: 1px;
+}
+
+.tabMenu ul a {
+  text-decoration: none;
+  position: relative;
+  color: var(--light-grey);
+  padding: 10px 20px;
+}
+
+.tabMenu ul a.active {
+  color: var(--yellow-color);
+}
+
+.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 38px;
+  border: 1px solid var(--yellow-color);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.tabContent {
+  width: calc(100% - 20rem);
+  height: fit-content;
+  padding: 1.3rem 1.5rem;
+  margin: 2rem 10rem;
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--white-color);
+}
+
+.tabContent h2 {
+  color: var(--medium-blue);
+}
+
+.tabContent p {
+  margin-top: 1rem;
+  color: var(--light-blue);
+}
+
+.rating {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: var(--white-color);
+}
+
+.rating img {
+  width: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .toolbar h1 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .tabMenu {
+    text-align: center;
+  }
+
+  .tabMenu ul {
+    justify-content: center;
+  }
+
+  .tabMenu ul a {
+    font-size: 14px;
+  }
+
+  .tabContent {
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+  }
+
+  .active::before {
+    top: 36px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .toolbar h1 {
+    text-align: center;
+  }
+  .tabMenu {
+    text-align: center;
+  }
+
+  .tabMenu ul {
+    justify-content: center;
+  }
+
+  .tabContent {
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+  }
+}

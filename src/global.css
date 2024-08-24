@@ -1,0 +1,47 @@
+:root {
+  --body-backGround: hsl(212, 80%, 42%);
+  --light-blue: hsl(207, 90%, 54%);
+  --light-grey: hsla(0, 0%, 100%, 0.7);
+  --yellow-color: hsl(54, 100%, 62%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  background-color: var(--body-backGround);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: var(--light-grey);
+  margin-top: 15rem;
+}
+
+footer a {
+  color: var(--yellow-color);
+}
+
+@media screen and (max-width: 425px) {
+  footer {
+    font-size: 10px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  footer {
+    margin-bottom: 1rem;
+  }
+}
